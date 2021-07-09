@@ -73,12 +73,50 @@ public class MainDrive {
 				
 			}
 				
+			
+		}
+		
+//		컴퓨터가 6개의 랜덤 숫자를 뽑아서 이번주 당첨번호를 추첨해보자
+		 
+		int[] winLottoNumbers = new int[6];
+		
+//		6개의 숫자를 넣기 위한 for문
+		for(int i = 0 ; i < winLottoNumbers.length; i++) {
+			
+//			중복검사를 통과하는 숫자를 뽑을 때 까지 무한반복시켜야함
+			while(true) {
 				
+//				컴퓨터가 랜덤으로 숫자를 제시 => 1~45 사이의 숫자를 랜덤으로 추출하면 굳이 범위검사는 필요없다				
+				int randomNumber = (int)(Math.random()*45+1); 
 				
+//				중복검사만 해도 되겠다
+				boolean isDupOk = true;
 				
+				for(int num : winLottoNumbers) {
+					
+					if(num == randomNumber) {
+						isDupOk = false;
+						break;
+					}
+				}
 				
+//				중복검사만 통과했어도 배열에 넣을 수 있다
+				if(isDupOk) {
+					winLottoNumbers[i] = randomNumber;
+					break;
+				}
 				
 			}
+			
+
+			
+			
+			
+			
+			
+		}
+		
+		
 			
 			
 		
