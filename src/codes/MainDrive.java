@@ -40,10 +40,34 @@ public class MainDrive {
 			
 		}
 		
-//		for(int num : winLottoNumbers) {
-//			System.out.println(num);
-//		}
+		for(int num : winLottoNumbers) {
+			System.out.println(num);
+		}
 		
+//		보너스번호도 뽑아주세요 => 1~45, 당첨번호와 겹치면 안된다
+		int bonusNumber = 0;		
+	
+		while(true) {
+//			보너스번호 제대로 뽑힐 때 까지 반복하자
+			int randomNum = (int)(Math.random()*45+1);
+			
+//			중복검사
+			boolean isDuplOk = true;
+			
+//			당첨번호 내부에 같은 숫자가 있다면 사용하면 안됨
+			for(int winNum : winLottoNumbers) {
+				if(winNum == randomNum) {
+					isDuplOk = false;
+					break;
+				}
+			}
+			if(isDuplOk) {
+				bonusNumber = randomNum;
+				break;
+			}
+	
+		}
+		System.out.println("보너스 번호 : " + bonusNumber);
 		
 		int[] myLottoNumbers = new int[6];
 		
