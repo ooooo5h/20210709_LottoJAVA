@@ -23,7 +23,7 @@ public class MainDrive {
 //				for문보다 앞에다가 만들고 활용만하자
 				
 //				안내문구 : ?번째 숫자를 입력
-				System.out.print((i+1)+"번째 숫자를 입력하세요.");
+				System.out.print((i+1)+"번째 숫자를 입력하세요 : ");
 				
 //				입력받은 숫자를 변수에 담아두고 그 변수가 검사를 통과하면 배열에 넣자
 				
@@ -51,8 +51,27 @@ public class MainDrive {
 					}
 						
 						
-					}
 				}
+				
+//				두개의 검사를 모두 통과했다면, 배열에 입력값을 대입 + 다음숫자 받으러 이동
+				if(isRangeOk && isDuplicateOk) {
+					myLottoNumbers[i] = inputNumber;
+					
+//					다음숫자 입력받으러 이동하려면 무한반복을 깨자
+//					그래야지 다음 바퀴로 이동하니까
+					break;					
+				}
+				
+//				isRangeOk가 false인가요!?
+				else if (!isRangeOk) {
+					System.out.println("1에서 45의 숫자만 입력가능합니다.");
+				}
+				else {
+					System.out.println("이미 입력한 숫자입니다.");
+				}
+				
+				
+			}
 				
 				
 				
