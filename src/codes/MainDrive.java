@@ -130,7 +130,24 @@ public class MainDrive {
 			
 		}
 		
-
+//		최종 결과는 맞춘 갯수 따라서 
+		if(correctNumCount == 6) {
+			System.out.println("1등");
+		}
+		else if(correctNumCount == 5) {
+			System.out.println("3등");
+		}
+		else if(correctNumCount == 4) {
+			System.out.println("4등");
+		}
+		else if(correctNumCount == 3) {
+			System.out.println("5등");
+		}
+		else {
+			System.out.println("낙첨");
+		}
+		
+		
 			
 			
 		
