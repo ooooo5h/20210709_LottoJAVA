@@ -108,15 +108,29 @@ public class MainDrive {
 				
 			}
 			
-
+		}
+	
+//		등수 판단 => 내 번호와 당첨번호를 비교하자 => 몇개를 맞췄나(같은 숫자가 몇개 있는지?)를 구해보자
+//		숫자야구게임과의 비교를 하면 : 야구게임에서는 위치도 판단 요소에 들어감 / 로또에서는 위치는 아무 상관없음
+		
+//		몇개의 숫자를 맞췄는지 기록할 변수를 만들자
+		int correctNumCount = 0;
+		
+//		내 번호를 하나씩 꺼내보자
+		for(int myNum : myLottoNumbers) {
 			
-			
-			
-			
+//			당첨번호도 하나씩 꺼내보자 => 내 번호랑 계속 같은지? 비교하자
+			for(int winNum : winLottoNumbers) {
+				
+				if(winNum == myNum) {
+//					같은 숫자를 찾았다면 맞춘 갯수 하나 증가
+					correctNumCount++;
+				}
+			}
 			
 		}
 		
-		
+
 			
 			
 		
