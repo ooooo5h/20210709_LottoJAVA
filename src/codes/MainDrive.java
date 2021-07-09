@@ -166,7 +166,26 @@ public class MainDrive {
 			System.out.println("1등");
 		}
 		else if(correctNumCount == 5) {
-			System.out.println("3등");
+			
+//			내 입력값과 보너스 번호가 같다면 => 보너스 번호를 맞췄음 => 2등
+//			보너스 번호가 다르다면 => 3등
+			
+			boolean isBonusCorrect = false;
+			
+//			보너스번호를 들고 내 로또번호를 둘러보자
+			for(int myNum : myLottoNumbers) {
+				if(myNum == bonusNumber) {
+					isBonusCorrect = true;
+				}
+				
+			}
+			
+			if(isBonusCorrect) {
+				System.out.println("2등");
+			}
+			else {
+				System.out.println("3등");	
+			}		
 		}
 		else if(correctNumCount == 4) {
 			System.out.println("4등");
